@@ -16,6 +16,7 @@ seeds:
 
 models:
   jaffle_shop:
+    +materialized: table # so everything in it will be materialized as a table automatically. If you want override this, do as the below staging and marts
     +static_analysis: strict
     # Materialize staging models as views, and marts as tables
     staging:
